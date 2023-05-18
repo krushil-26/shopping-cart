@@ -12,6 +12,7 @@ const Mobile = () => {
         dispatch(addCart(e));
     }
   return (
+    
     <div className='details-page'>
         <img className='details-page-image' style={{}} src={thisProduct.image} alt='destination image'/>
         <div className='right-contents'>

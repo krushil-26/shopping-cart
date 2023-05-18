@@ -12,8 +12,21 @@ const Home = () => {
         dispatch(addCart(e));
         document.getElementsByClassName("addcart")[e.id -1].innerHTML = "Added"
     }
+    const filteritem = (category) => {
+      const updateList = Data.filter((cueElem) => {
+        return cueElem.brand === category;
+      });
+      setData(updateList)
+    }
   return (
-    <div className='mobile'>
+    <>
+    <div className='filter-main'>
+        <button onClick={() => setData(Data)} className='filter-btn all'>All</button>
+        <button onClick={() => filteritem("samsung")} className='filter-btn samsung'>Samsung</button>
+        <button onClick={() => filteritem("oneplus")} className='filter-btn oneplus'>Oneplus</button>
+        <button onClick={() => filteritem("apple")} className='filter-btn apple'>Apple</button>
+    </div>
+    <div className='mobile'>  
       {
           data.map((e) => {
             return (
@@ -32,7 +45,7 @@ const Home = () => {
           })
         }
     </div>
-
+    </>
     
   )}
 export default Home

@@ -27,6 +27,24 @@ li{
 .home-image{
   width: 250px;
 }
+.filter-btn{
+  width:140px;
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+}
+.filter-btn:focus {
+  background-color: black;
+  color: white;
+}
+.filter-main{
+  display: flex;
+    column-gap: 20px;
+    justify-content: center;
+}
 .contents{
   text-align: center;
     padding-top: 10px;
